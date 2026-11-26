@@ -1,0 +1,172 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+Spectacole · Teatrul Nottara
+{% endblock %}
+
+
+{% block content %}
+
+<section class="page-header">
+
+    <div>
+        <p class="eyebrow">
+            TEATRUL NOTTARA
+        </p>
+
+        <h1>
+            Spectacole
+        </h1>
+
+        <p>
+            Descoperă repertoriul Teatrului Nottara.
+        </p>
+    </div>
+
+</section>
+
+
+<form
+    class="search-form"
+    method="GET"
+    action="{{ url_for('shows') }}"
+>
+
+    <input
+        type="text"
+        name="q"
+        placeholder="Caută după titlu, autor sau regizor..."
+        value="{{ search }}"
+    >
+
+    <button type="submit">
+        Caută
+    </button>
+
+</form>
+
+
+{% if search %}
+
+<p class="search-info">
+    Rezultate pentru:
+    <strong>{{ search }}</strong>
+</p>
+
+{% endif %}
+
+
+<div class="shows-grid">
+
+    {% for show in shows %}
+
+        <article class="show-card">
+
+            <a
+                href="{{ url_for(
+                    'show_detail',
+                    show_id=show.id
+                ) }}"
+                class="poster-link"
+            >
+
+                {% if show.poster_path %}
+
+                    <img
+                        src="/{{ show.poster_path }}"
+                        alt="{{ show.title }}"
+                        class="poster"
+                    >
+
+                {% else %}
+
+                    <div class="poster-placeholder">
+                        Fără afiș
+                    </div>
+
+                {% endif %}
+
+            </a>
+
+
+            <div class="show-card-content">
+
+                <h2>
+                    <a
+                        href="{{ url_for(
+                            'show_detail',
+                            show_id=show.id
+                        ) }}"
+                    >
+                        {{ show.title }}
+                    </a>
+                </h2>
+
+
+                {% if show.author %}
+
+                    <p class="author">
+                        de {{ show.author }}
+                    </p>
+
+                {% endif %}
+
+
+                {% if show.director %}
+
+                    <p>
+                        <strong>Regia:</strong>
+                        {{ show.director }}
+                    </p>
+
+                {% endif %}
+
+
+                <div class="metadata">
+
+                    {% if show.duration_text %}
+                        <span>
+                            {{ show.duration_text }}
+                        </span>
+                    {% endif %}
+
+
+                    {% if show.age_recommendation %}
+                        <span>
+                            {{ show.age_recommendation }}
+                        </span>
+                    {% endif %}
+
+                </div>
+
+
+                <a
+                    class="details-button"
+                    href="{{ url_for(
+                        'show_detail',
+                        show_id=show.id
+                    ) }}"
+                >
+                    Vezi spectacolul
+                </a>
+
+            </div>
+
+        </article>
+
+    {% endfor %}
+
+</div>
+
+
+{% if not shows %}
+
+<div class="empty-state">
+    Nu am găsit spectacole.
+</div>
+
+{% endif %}
+
+
+{% endblock %}

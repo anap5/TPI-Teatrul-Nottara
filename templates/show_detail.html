@@ -1,0 +1,279 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+{{ show.title }} · Teatrul Nottara
+{% endblock %}
+
+
+{% block content %}
+
+<a
+    class="back-link"
+    href="{{ url_for('shows') }}"
+>
+    ← Înapoi la spectacole
+</a>
+
+
+<section class="show-detail">
+
+    <div class="detail-poster">
+
+        {% if show.poster_path %}
+
+            <img
+                src="/{{ show.poster_path }}"
+                alt="{{ show.title }}"
+            >
+
+        {% endif %}
+
+    </div>
+
+
+    <div class="detail-info">
+
+        <p class="eyebrow">
+            SPECTACOL
+        </p>
+
+        <h1>
+            {{ show.title }}
+        </h1>
+
+
+        {% if show.author %}
+
+            <p class="detail-author">
+                de {{ show.author }}
+            </p>
+
+        {% endif %}
+
+
+        {% if show.director %}
+
+            <p>
+                <strong>Regia:</strong>
+                {{ show.director }}
+            </p>
+
+        {% endif %}
+
+
+        <div class="metadata">
+
+            {% if show.duration_text %}
+
+                <span>
+                    {{ show.duration_text }}
+                </span>
+
+            {% endif %}
+
+
+            {% if show.age_recommendation %}
+
+                <span>
+                    {{ show.age_recommendation }}
+                </span>
+
+            {% endif %}
+
+
+            {% if show.language %}
+
+                <span>
+                    {{ show.language }}
+                </span>
+
+            {% endif %}
+
+        </div>
+
+
+        {% if show.description %}
+
+            <div class="description">
+
+                {% for paragraph in show.description.split('\n\n') %}
+
+                    <p>
+                        {{ paragraph }}
+                    </p>
+
+                {% endfor %}
+
+            </div>
+
+        {% endif %}
+
+    </div>
+
+</section>
+
+
+{% if performances %}
+
+<section class="detail-section">
+
+    <h2>
+        Reprezentații
+    </h2>
+
+
+    <div class="performance-list">
+
+        {% for performance in performances %}
+
+            <div class="performance-row">
+
+                <div class="performance-date">
+
+                    <strong>
+                        {{ performance.start_at.strftime('%d.%m.%Y') }}
+                    </strong>
+
+                    <span>
+                        {{ performance.start_at.strftime('%H:%M') }}
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    {% if performance.venue %}
+
+                        <strong>
+                            {{ performance.venue }}
+                        </strong>
+
+                    {% endif %}
+
+
+                    {% if performance.address %}
+
+                        <p>
+                            {{ performance.address }}
+                        </p>
+
+                    {% endif %}
+
+                </div>
+
+
+                {% if performance.status %}
+
+                    <span class="status">
+                        {{ performance.status }}
+                    </span>
+
+                {% endif %}
+
+            </div>
+
+        {% endfor %}
+
+    </div>
+
+</section>
+
+{% endif %}
+
+
+{% if show.cast %}
+
+<section class="detail-section">
+
+    <h2>
+        Distribuția
+    </h2>
+
+
+    <div class="people-grid">
+
+        {% for person in show.cast %}
+
+            <div class="person">
+
+                <strong>
+                    {{ person.name }}
+                </strong>
+
+
+                {% if person.character %}
+
+                    <span>
+                        {{ person.character }}
+                    </span>
+
+                {% endif %}
+
+            </div>
+
+        {% endfor %}
+
+    </div>
+
+</section>
+
+{% endif %}
+
+
+{% if show.team %}
+
+<section class="detail-section">
+
+    <h2>
+        Echipa spectacolului
+    </h2>
+
+
+    <div class="team-list">
+
+        {% for person in show.team %}
+
+            <div class="team-member">
+
+                {% if person.role %}
+
+                    <strong>
+                        {{ person.role }}
+                    </strong>
+
+                {% endif %}
+
+                <span>
+                    {{ person.name }}
+                </span>
+
+            </div>
+
+        {% endfor %}
+
+    </div>
+
+</section>
+
+{% endif %}
+
+
+{% if show.source_url %}
+
+<section class="source">
+
+    <a
+        href="{{ show.source_url }}"
+        target="_blank"
+    >
+        Pagina originală a spectacolului ↗
+    </a>
+
+</section>
+
+{% endif %}
+
+
+{% endblock %}

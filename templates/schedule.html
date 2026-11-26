@@ -1,0 +1,125 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+Program · Teatrul Nottara
+{% endblock %}
+
+
+{% block content %}
+
+<section class="page-header">
+
+    <div>
+
+        <p class="eyebrow">
+            TEATRUL NOTTARA
+        </p>
+
+        <h1>
+            Program
+        </h1>
+
+        <p>
+            Reprezentațiile disponibile în baza de date.
+        </p>
+
+    </div>
+
+</section>
+
+
+<div class="schedule-list">
+
+    {% for performance in performances %}
+
+        <article class="schedule-item">
+
+            <div class="schedule-date">
+
+                <span>
+                    {{ performance.start_at.strftime('%d') }}
+                </span>
+
+                <strong>
+                    {{ performance.start_at.strftime('%m.%Y') }}
+                </strong>
+
+                <div>
+                    {{ performance.start_at.strftime('%H:%M') }}
+                </div>
+
+            </div>
+
+
+            <div class="schedule-info">
+
+                <h2>
+
+                    <a
+                        href="{{ url_for(
+                            'show_detail',
+                            show_id=performance.show_id
+                        ) }}"
+                    >
+                        {{ performance.title }}
+                    </a>
+
+                </h2>
+
+
+                {% if performance.author %}
+
+                    <p class="author">
+                        de {{ performance.author }}
+                    </p>
+
+                {% endif %}
+
+
+                {% if performance.venue %}
+
+                    <p>
+                        <strong>Locație:</strong>
+                        {{ performance.venue }}
+                    </p>
+
+                {% endif %}
+
+
+                {% if performance.address %}
+
+                    <p>
+                        {{ performance.address }}
+                    </p>
+
+                {% endif %}
+
+            </div>
+
+
+            {% if performance.status %}
+
+                <div class="status">
+                    {{ performance.status }}
+                </div>
+
+            {% endif %}
+
+        </article>
+
+    {% endfor %}
+
+</div>
+
+
+{% if not performances %}
+
+    <div class="empty-state">
+        Nu există reprezentații disponibile.
+    </div>
+
+{% endif %}
+
+
+{% endblock %}

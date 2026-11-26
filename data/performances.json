@@ -1,0 +1,122 @@
+[
+    {
+        "day": "Mie",
+        "date": "2 dec.",
+        "time": "18:30",
+        "start_at": "2026-12-02 18:30:00",
+        "venue": "Nottara - Sala Horia Lovinescu",
+        "address": "Bulevardul General Gheorghe Magheru 20, Bucuresti",
+        "status": "Sold out",
+        "source_url": "https://www.bilet.ro/eveniment/amadeus-18796",
+        "show_source_url": "https://nottara.ro/spectacol/amadeus/",
+        "show_title": "Amadeus"
+    },
+    {
+        "day": "Joi",
+        "date": "3 dec.",
+        "time": "18:30",
+        "start_at": "2026-12-03 18:30:00",
+        "venue": "Nottara - Sala Horia Lovinescu",
+        "address": "Bulevardul General Gheorghe Magheru 20, Bucuresti",
+        "status": "Sold out",
+        "source_url": "https://www.bilet.ro/eveniment/amadeus-18796",
+        "show_source_url": "https://nottara.ro/spectacol/amadeus/",
+        "show_title": "Amadeus"
+    },
+    {
+        "day": "Vin",
+        "date": "11 dec.",
+        "time": "19:30",
+        "start_at": "2026-12-11 19:30:00",
+        "venue": "Nottara - Sala George Constantin",
+        "address": "Bulevardul General Gheorghe Magheru 20, Bucuresti",
+        "status": "Ultimele bilete",
+        "source_url": "https://www.bilet.ro/eveniment/confesiunea-adolescentei-19487",
+        "show_source_url": "https://nottara.ro/spectacol/confesiunea-adolescente/",
+        "show_title": "Confesiunea adolescentei"
+    },
+    {
+        "day": "Mie",
+        "date": "16 dec.",
+        "time": "19:30",
+        "start_at": "2026-12-16 19:30:00",
+        "venue": "Nottara - Sala George Constantin",
+        "address": "Bulevardul General Gheorghe Magheru 20, Bucuresti",
+        "status": "Ultimele bilete",
+        "source_url": "https://www.bilet.ro/eveniment/confesiunea-adolescentei-19487",
+        "show_source_url": "https://nottara.ro/spectacol/confesiunea-adolescente/",
+        "show_title": "Confesiunea adolescentei"
+    },
+    {
+        "day": "Dum",
+        "date": "20 dec.",
+        "time": "19:00",
+        "start_at": "2026-12-20 19:00:00",
+        "venue": "Nottara - Sala Horia Lovinescu",
+        "address": "Bulevardul General Gheorghe Magheru 20, Bucuresti",
+        "status": "Bilete disponibile",
+        "source_url": "https://www.bilet.ro/eveniment/dancer-in-the-dark-19477",
+        "show_source_url": "https://nottara.ro/spectacol/dancer-in-the-dark/",
+        "show_title": "Dancer in the dark"
+    },
+    {
+        "day": "Sâm",
+        "date": "12 dec.",
+        "time": "19:30",
+        "start_at": "2026-12-12 19:30:00",
+        "venue": "Nottara - Sala George Constantin",
+        "address": "Bulevardul General Gheorghe Magheru 20, Bucuresti",
+        "status": "Ultimele bilete",
+        "source_url": "https://www.bilet.ro/eveniment/de-paza-la-taj-mahal-17875",
+        "show_source_url": "https://nottara.ro/spectacol/de-paza-la-taj-mahal/",
+        "show_title": "De pază la Taj Mahal"
+    },
+    {
+        "day": "Sâm",
+        "date": "19 dec.",
+        "time": "19:30",
+        "start_at": "2026-12-19 19:30:00",
+        "venue": "Nottara - Sala George Constantin",
+        "address": "Bulevardul General Gheorghe Magheru 20, Bucuresti",
+        "status": "Ultimele bilete",
+        "source_url": "https://www.bilet.ro/eveniment/la-doi-pasi-de-mullingar-15888",
+        "show_source_url": "https://nottara.ro/spectacol/la-doi-pasi-de-mullingar/",
+        "show_title": "La doi pași de Mullingar"
+    },
+    {
+        "day": "Sâm",
+        "date": "5 dec.",
+        "time": "19:00",
+        "start_at": "2026-12-05 19:00:00",
+        "venue": "Nottara - Sala Horia Lovinescu",
+        "address": "Bulevardul General Gheorghe Magheru 20, Bucuresti",
+        "status": "Bilete disponibile",
+        "source_url": "https://www.bilet.ro/eveniment/liniste-in-culise-15627",
+        "show_source_url": "https://nottara.ro/spectacol/liniste-in-culise/",
+        "show_title": "Liniște în culise"
+    },
+    {
+        "day": "Vin",
+        "date": "4 dec.",
+        "time": "19:00",
+        "start_at": "2026-12-04 19:00:00",
+        "venue": "Nottara - Sala Horia Lovinescu",
+        "address": "Bulevardul General Gheorghe Magheru 20, Bucuresti",
+        "status": "Bilete disponibile",
+        "source_url": "https://www.bilet.ro/eveniment/ultima-ora-15626",
+        "show_source_url": "https://nottara.ro/spectacol/ultima-ora/",
+        "show_title": "Ultima oră"
+    },
+    {
+        "day": "Dum",
+        "date": "20 dec.",
+        "time": "19:30",
+        "start_at": "2026-12-20 19:30:00",
+        "venue": "Nottara - Sala George Constantin",
+        "address": "Bulevardul General Gheorghe Magheru 20, Bucuresti",
+        "status": "Ultimele bilete",
+        "source_url": "https://www.bilet.ro/eveniment/vizitatorul-15638-50126",
+        "show_source_url": "https://nottara.ro/spectacol/vizitatorul/",
+        "show_title": "Vizitatorul"
+    }
+]
